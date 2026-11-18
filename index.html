@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Zoop | Reefer Trucks Across India</title>
+<meta name="description" content="Book temperature-controlled reefer trucks across India. Live temperature tracking, multi-temperature vehicles, verified partners." />
+<meta name="theme-color" content="#FFC72C" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&display=swap" rel="stylesheet" />
+<style>
+
+
+/* =========================================
+   ZOOP HERO SECTION - MOBILE RESPONSIVE FIX
+   Add this at the END of your existing CSS
+========================================= */
+
+/* Desktop hero */
+.hero {
+    width: 100%;
+    min-height: 680px;
+    display: flex;
+    align-items: center;
+    padding: 125px 0 85px;
+    overflow: hidden;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(7, 22, 38, .90) 0%,
+            rgba(7, 22, 38, .72) 48%,
+            rgba(7, 22, 38, .35) 100%
+        ),
+        url("images/truckhero.webp") center / cover no-repeat;
+}
+
+.hero .wrap {
+    width: 100%;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 500px);
+    align-items: center;
+    gap: 48px;
+}
+
+.hero .wrap > div:first-child {
+    min-width: 0;
+}
+
+.hero h1 {
+    color: #fff;
+    font-size: clamp(42px, 5vw, 76px);
+    line-height: 1.04;
+    overflow-wrap: normal;
+}
+
+.hero h1 .ln:last-child {
+    color: var(--y);
+}
+
+.hero .wrap > div:first-child > p {
+    color: #dbe9f5;
+    max-width: 480px;
+    font-size: 18px;
+    line-height: 1.65;
+}
+
+.hero__cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.hero .btn--line {
+    border-color: #fff;
+    color: #fff;
+}
+
+.hero .btn--line:hover {
+    background: #fff;
+    color: var(--ink);
+}
+
+.hero .strip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.hero .strip span {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .2);
+}
+
+.bookwrap {
+    width: 100%;
+    min-width: 0;
+}
+
+.book {
+    width: 100%;
+    max-width: 500px;
+    margin-left: auto;
+    padding: 26px;
+    border-radius: 26px;
+    background: #fff;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, .25);
+}
+
+.book h2 {
+    font-size: 28px;
+    line-height: 1.2;
+}
+
+.book > p {
+    margin: 6px 0 16px;
+    color: var(--tx);
+    font-size: 14px;
+}
+
+.book .svc {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 8px;
+}
+
+.book .svc button {
+    min-width: 0;
+    padding: 10px 4px;
+    font-size: 12px;
+}
+
+.book .svc button span {
+    font-size: 21px;
+}
+
+.book .fg {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.book .fg .full {
+    grid-column: 1 / -1;
+}
+
+.book .fg input,
+.book .fg select {
+    min-width: 0;
+    width: 100%;
+    padding: 12px;
+    font-size: 13px;
+}
+
+.book .btn {
+    width: 100%;
+    margin-top: 16px;
+}
+
+/* Tablet */
+@media (max-width: 960px) {
+    .hero {
+        min-height: auto;
+        display: block;
+        padding: 110px 0 65px;
+        background:
+            linear-gradient(
+                180deg,
+                rgba(7, 22, 38, .90),
+                rgba(7, 22, 38, .76)
+            ),
+            url("images/truckhero.webp") center / cover no-repeat;
+    }
+
+    .hero .wrap {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 35px;
+    }
+
+    .hero .wrap > div:first-child {
+        max-width: 680px;
+    }
+
+    .book {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .hero h1 {
+        font-size: clamp(42px, 7vw, 62px);
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .hero {
+        min-height: auto;
+        padding: 100px 0 42px;
+        background-position: 60% center;
+    }
+
+    .hero .wrap {
+        padding-left: 18px;
+        padding-right: 18px;
+        gap: 25px;
+    }
+
+    .tagline {
+        max-width: 100%;
+        padding: 8px 12px;
+        gap: 8px;
+        font-size: 10px;
+        line-height: 1.5;
+    }
+
+    .tagline b {
+        flex: 0 0 10px;
+    }
+
+    .hero h1 {
+        margin: 20px 0 15px;
+        font-size: clamp(34px, 9vw, 43px);
+        line-height: 1.08;
+        letter-spacing: -.04em;
+    }
+
+    .hero h1 .ln {
+        display: block;
+    }
+
+    .hero .wrap > div:first-child > p {
+        max-width: 100%;
+        font-size: 15px;
+        line-height: 1.65;
+    }
+
+    .hero__cta {
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    .hero__cta .btn {
+        padding: 12px 17px;
+        font-size: 13px;
+    }
+
+    .hero .strip {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 7px;
+        margin-top: 20px;
+    }
+
+    .hero .strip span {
+        min-width: 0;
+        padding: 9px 6px;
+        gap: 5px;
+        flex-direction: column;
+        align-items: flex-start;
+        border-radius: 13px;
+        font-size: 10px;
+        line-height: 1.35;
+    }
+
+    .hero .strip i {
+        width: 27px;
+        height: 27px;
+        font-size: 13px;
+    }
+
+    /* Booking card */
+    .book {
+        padding: 19px 15px;
+        border-radius: 20px;
+    }
+
+    .book::before {
+        inset: 7px -6px -7px 7px;
+        border-radius: 20px;
+    }
+
+    .book h2 {
+        font-size: 23px;
+    }
+
+    .book > p {
+        font-size: 12px;
+        margin-bottom: 12px;
+    }
+
+    .book .svc {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+        margin-bottom: 14px;
+    }
+
+    .book .svc button {
+        padding: 9px 5px;
+        font-size: 12px;
+        border-radius: 12px;
+    }
+
+    .book .svc button span {
+        font-size: 19px;
+    }
+
+    .book .fg {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .book .fg .full {
+        grid-column: 1 / -1;
+    }
+
+    .book .fg label {
+        font-size: 11px;
+    }
+
+    .book .fg input,
+    .book .fg select {
+        width: 100%;
+        min-width: 0;
+        padding: 11px 8px;
+        font-size: 12px;
+        border-radius: 10px;
+    }
+
+    .book .btn {
+        padding: 14px;
+        font-size: 14px;
+        margin-top: 14px;
+    }
+
+    #formNote {
+        font-size: 11px;
+    }
+
+    /* Disable decorative image card positioning in hero */
+    .hero .hv,
+    .hero .temp,
+    .hero .route {
+        display: none;
+    }
+}
+
+/* Very small phones */
+@media (max-width: 380px) {
+    .hero {
+        padding-top: 95px;
+    }
+
+    .hero .wrap {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero__cta .btn {
+        padding: 11px 13px;
+        font-size: 12px;
+    }
+
+    .hero .strip span {
+        font-size: 9px;
+    }
+
+    .book {
+        padding: 16px 12px;
+    }
+
+    .book .fg {
+        gap: 8px;
+    }
+
+    .book .fg input,
+    .book .fg select {
+        font-size: 11px;
+    }
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--ink:#0b1f33;--ink2:#12304a;--frost:#f2f8fc;--ice:#e1f0f8;--blue:#0b7fd0;--cy:#14b8d4;--mint:#12b886;--y:#ffc72c;--tx:#4a627a;--line:rgba(11,31,51,.12);--d:"Bricolage Grotesque","Plus Jakarta Sans",system-ui,sans-serif;--t:#4cc9f0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+html,body{overflow-x:clip}
+body{font:500 16px/1.6 "Plus Jakarta Sans",system-ui,sans-serif;color:var(--tx);background:var(--frost)}
+a{color:inherit;text-decoration:none}ul,ol{list-style:none}img{display:block;max-width:100%}
+.wrap{width:100%;max-width:1240px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--d);color:var(--ink);line-height:1;letter-spacing:-.03em}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+::selection{background:var(--y);color:var(--ink)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 26px;border-radius:999px;border:2px solid transparent;font:700 15px "Plus Jakarta Sans",system-ui,sans-serif;cursor:pointer;transition:transform .2s,box-shadow .25s,background .25s,color .25s}
+.btn:hover{transform:translateY(-3px)}
+.btn--cta{background:var(--y);color:var(--ink);box-shadow:0 10px 24px rgba(255,199,44,.55)}.btn--cta:hover{box-shadow:0 14px 34px rgba(255,199,44,.8)}
+.btn--line{border-color:var(--ink);color:var(--ink)}.btn--line:hover{background:var(--ink);color:#fff}
+.btn--ink{background:var(--ink);color:var(--y);box-shadow:0 12px 28px rgba(11,31,51,.35)}
+.progress{position:fixed;top:0;left:0;height:4px;width:100%;z-index:100;transform:scaleX(0);transform-origin:0 50%;background:linear-gradient(90deg,var(--y),var(--cy))}
+/* nav */
+.nav{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .3s,box-shadow .3s}
+.nav.on{background:rgba(255,255,255,.88);backdrop-filter:blur(14px);box-shadow:0 6px 24px rgba(11,31,51,.08)}
+.nav__in{display:flex;align-items:center;justify-content:space-between;gap:16px;height:74px}
+.logo{display:flex;align-items:center;gap:10px;font:800 24px var(--d);color:var(--ink)}
+.logo i{display:grid;place-items:center;width:38px;height:38px;border-radius:12px;background:var(--y);color:var(--ink);font-style:normal;animation:spin 14s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.nav__l{display:flex;gap:28px;margin:0 auto}.nav__l a{font-weight:700;font-size:14px;color:var(--ink);position:relative;white-space:nowrap}
+.nav__l a::after{content:"";position:absolute;left:0;bottom:-6px;height:3px;width:0;border-radius:3px;background:var(--y);transition:width .25s}.nav__l a:hover::after{width:100%}
+.nav__r{display:flex;gap:10px}.nav__r .btn{padding:10px 20px;font-size:14px}
+.burger{display:none;background:none;border:0;cursor:pointer;padding:8px}.burger span{display:block;width:26px;height:2px;background:var(--ink);margin:6px 0}
+/* hero */
+.hero{position:relative;overflow:hidden;isolation:isolate;padding:140px 0 100px;background:radial-gradient(ellipse 50% 60% at 95% 5%,#cfe9f7,transparent 70%),radial-gradient(ellipse 40% 40% at 0% 100%,rgba(255,199,44,.25),transparent 70%),linear-gradient(#f4f9fd,#e6f3fa)}
+#snow{position:absolute;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.tagline{display:inline-flex;align-items:center;gap:10px;padding:8px 18px 8px 12px;border-radius:999px;background:#fff;border:1px solid var(--line);color:var(--ink);font-size:12px;font-weight:700;letter-spacing:.03em;box-shadow:0 6px 18px rgba(11,31,51,.06)}
+.tagline b{width:12px;height:12px;border-radius:50%;background:var(--mint);animation:pl 1.8s infinite}
+@keyframes pl{0%{box-shadow:0 0 0 0 rgba(18,184,134,.6)}70%,100%{box-shadow:0 0 0 12px transparent}}
+.hero h1{margin:22px 0 20px;font-size:clamp(38px,4.9vw,78px);font-weight:800;line-height:1}
+.hero h1 .ln{display:block}.hero h1 .ln:last-child{color:var(--blue)}
+.w{display:inline-block;white-space:nowrap;margin-right:.22em}
+.ch{display:inline-block;animation:drop .9s cubic-bezier(.3,1.6,.5,1) backwards,hop 2.8s ease-in-out infinite;animation-delay:calc(var(--i)*.05s),calc(1.4s + var(--i)*.09s);cursor:default}
+.ch:hover{animation:none;transform:translateY(-.18em) rotate(-6deg);color:#e8a800;transition:transform .15s}
+@keyframes drop{from{transform:translateY(-1.2em) scale(.6);opacity:0}}
+@keyframes hop{0%,55%,100%{transform:none}22%{transform:translateY(-.16em)}38%{transform:translateY(0)}45%{transform:translateY(-.05em)}}
+.hero p{max-width:480px;font-size:18px}
+.hero__cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px}
+.strip{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}
+.strip span{display:flex;align-items:center;gap:10px;padding:10px 16px 10px 10px;border-radius:16px;background:#fff;border:1px solid var(--line);font-size:13px;font-weight:700;color:var(--ink);line-height:1.25}
+.strip i{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--ice);font-style:normal;color:var(--blue)}.strip .g i{background:#d8f6ea;color:var(--mint)}.strip .y i{background:#fff2c4;color:#b78500}
+.hv{position:relative}
+.hv::before{content:"";position:absolute;inset:22px -20px -22px 22px;border-radius:36px;background:var(--y);z-index:-1}
+.hv img{width:100%;aspect-ratio:4/3.2;object-fit:cover;border-radius:36px;box-shadow:0 30px 70px rgba(11,31,51,.28);transform:translate(var(--mx,0),var(--my,0));transition:transform .4s ease-out}
+.temp,.route{position:absolute;background:#fff;border-radius:20px;box-shadow:0 18px 40px rgba(11,31,51,.2);color:var(--ink)}
+.temp{left:-34px;top:10%;display:flex;align-items:center;gap:12px;padding:12px 18px;animation:bob 5s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-10px)}}
+.temp em{display:grid;place-items:center;width:40px;height:40px;border-radius:12px;background:var(--ice);font-style:normal;font-size:22px;color:var(--blue)}
+.temp small{display:block;font-size:11px;font-weight:700;letter-spacing:.04em;color:var(--tx)}.temp strong{font:800 26px var(--d);letter-spacing:-.02em}
+.temp b{width:11px;height:11px;border-radius:50%;background:var(--mint);box-shadow:0 0 10px var(--mint)}
+.route{right:-10px;bottom:-24px;display:flex;align-items:center;gap:10px;padding:12px 20px;border-radius:999px;font-weight:800;font-size:14px}
+.route s{width:50px;border-top:2px dotted var(--blue);text-decoration:none}
+/* hero booking card */
+.hero{padding:130px 0 90px;background:linear-gradient(90deg,rgba(244,249,253,.97) 0%,rgba(244,249,253,.9) 42%,rgba(230,243,250,.5) 100%),url(images/truckhero.webp) center/cover no-repeat}
+.hero .wrap{grid-template-columns:1fr 500px;gap:48px;align-items:center}
+.book{position:relative;padding:26px;border-radius:28px;background:#fff;border:1px solid var(--line);box-shadow:0 30px 70px rgba(11,31,51,.28)}
+.book::before{content:"";position:absolute;inset:14px -14px -14px 14px;border-radius:28px;background:var(--y);z-index:-1}
+.book h2{font-size:28px}
+.book>p{margin:4px 0 16px;font-size:14px}
+.book .svc{gap:8px;margin-bottom:16px}
+.book .svc button{padding:10px 4px;border-radius:14px;font-size:12px}
+.book .svc button span{font-size:22px}
+.book .fg{grid-template-columns:1fr 1fr;gap:10px}
+.book .fg .full{grid-column:1/-1}
+.book .fg input,.book .fg select{padding:12px;font-size:14px}
+.book .btn{margin-top:14px;padding:15px;font-size:16px;width:100%}
+.book #formNote{margin-top:10px}
+@media(max-width:600px){.book{padding:20px}.book .fg{grid-template-columns:1fr}.book .fg .full{grid-column:auto}.hero{padding:110px 0 70px}}
+/* hero: truck photo behind the headline */
+.hero{min-height:680px;display:flex;align-items:center;background:linear-gradient(90deg,rgba(7,22,38,.9) 0%,rgba(7,22,38,.72) 45%,rgba(7,22,38,.35) 100%),url(images/truckhero.webp) center/cover no-repeat}
+.hero .wrap{position:relative}
+.hero h1{color:#fff;text-shadow:0 4px 28px rgba(0,0,0,.35)}
+.hero h1 .ln:last-child{color:var(--y)}
+.hero>.wrap p{color:#dbe9f5}
+.hero .btn--line{border-color:#fff;color:#fff}
+.hero .btn--line:hover{background:#fff;color:var(--ink)}
+.hero .strip span{box-shadow:0 8px 20px rgba(0,0,0,.25)}
+.nav{background:rgba(255,255,255,.92);backdrop-filter:blur(14px);box-shadow:0 6px 24px rgba(11,31,51,.1)}
+.book p{color:var(--tx)}
+@media(max-width:960px){.hero{min-height:0;display:block;background:linear-gradient(180deg,rgba(7,22,38,.88),rgba(7,22,38,.6)),url(images/truckhero.webp) center/cover no-repeat}}
+/* sections */
+.sec{position:relative;padding:110px 0;overflow:hidden}
+.hd{max-width:820px;margin-bottom:50px}.hd h2{font-size:clamp(34px,5vw,70px);font-weight:800}
+.hd p{margin-top:16px;font-size:18px;max-width:520px}
+.eyebrow{display:inline-block;margin-bottom:14px;padding:6px 14px;border-radius:999px;background:var(--y);color:var(--ink);font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
+.rv{opacity:0;transform:translateY(40px);transition:opacity .8s ease var(--dl,0s),transform .8s cubic-bezier(.2,.7,.2,1) var(--dl,0s)}.rv.in{opacity:1;transform:none}
+.dk{color:#b8cfe3}.dk h2,.dk h3{color:#fff}
+/* cargo */
+.work{background:#fff}
+.gal{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:230px;gap:18px}
+.tile{position:relative;overflow:hidden;border-radius:26px;background:var(--ice);cursor:pointer;transition:transform .4s cubic-bezier(.2,.7,.2,1),box-shadow .4s}
+.tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .9s ease}
+.tile:hover{transform:translateY(-8px) rotate(-.8deg);box-shadow:0 0 0 3px var(--y),0 30px 60px rgba(11,31,51,.25)}.tile:hover img{transform:scale(1.1)}
+.tile::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(11,31,51,.88))}
+.tile figcaption{position:absolute;z-index:2;left:22px;right:22px;bottom:18px;color:#fff}
+.tile h3{font-size:26px;color:#fff}.tile small{display:block;margin-top:6px;color:var(--y);font-weight:700;opacity:0;transform:translateY(10px);transition:.35s}.tile:hover small{opacity:1;transform:none}
+.t1{grid-row:span 2}.t4,.t8{grid-column:span 2}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:34px}
+.chips span{padding:10px 18px;border-radius:999px;background:var(--frost);border:1px solid var(--line);font-size:14px;font-weight:700;color:var(--ink);transition:.25s}.chips span:hover{background:var(--y);border-color:var(--y);transform:translateY(-3px)}
+/* temperature tabs (new) */
+.tz{background:linear-gradient(180deg,#f7fbfe,#e9f4fa);--c:#0b9fd6;--c2:#d9f1fb;--cd:#064a6b}
+.tz.z-ch{--c:#12b886;--c2:#d8f6ea;--cd:#075c43}
+.tz.z-am{--c:#e8a800;--c2:#fff2c4;--cd:#5c4200}
+.tz .wrap{position:relative}
+.tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:22px}
+.ztab{position:relative;overflow:hidden;display:flex;align-items:center;gap:14px;padding:16px 20px;border-radius:22px;background:#fff;border:2px solid var(--line);font:inherit;color:var(--ink);text-align:left;cursor:pointer;transition:transform .3s,border-color .3s,box-shadow .3s}
+.ztab:hover{transform:translateY(-4px)}
+.ztab i{display:grid;place-items:center;flex:none;width:46px;height:46px;border-radius:14px;background:var(--frost);font-style:normal;font-size:22px;transition:background .3s}
+.ztab strong{display:block;font:800 22px var(--d);letter-spacing:-.02em}
+.ztab small{display:block;font-size:13px;font-weight:700;color:var(--tx)}
+.ztab::after{content:"";position:absolute;left:0;bottom:0;height:4px;width:100%;background:var(--c);transform:scaleX(0);transform-origin:0 50%}
+.ztab.on{border-color:var(--c);box-shadow:0 14px 34px rgba(11,31,51,.14)}
+.ztab.on i{background:var(--c2)}
+.ztab.on::after{transform:scaleX(1);transition:transform 5s linear}
+.ztab.paused::after{transition:none}
+.room{display:grid;grid-template-columns:.8fr 1.2fr;gap:22px}
+.room__main{position:relative;overflow:hidden;padding:34px;border-radius:34px;background:var(--cd);color:#fff;display:flex;flex-direction:column;justify-content:space-between;gap:24px;transition:background .6s}
+.room__main::before{content:"";position:absolute;right:-90px;top:-90px;width:300px;height:300px;border-radius:50%;background:var(--c);opacity:.35;filter:blur(10px);transition:background .6s}
+.room__main>*{position:relative}
+.room__main small{font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--c2)}
+.room__n{font:800 clamp(44px,5vw,70px)/1 var(--d);letter-spacing:-.04em;margin:12px 0 8px}
+.room__n span{font-size:.45em;vertical-align:top;margin-left:2px;color:var(--c2)}
+.room__main h3{color:#fff;font-size:28px}
+.room__main p{margin-top:8px;color:rgba(255,255,255,.8);font-size:15px;max-width:340px}
+.specs{display:flex;gap:8px;flex-wrap:wrap}
+.specs span{padding:7px 13px;border-radius:999px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.22);font-size:13px;font-weight:700}
+.room__list{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;align-content:start}
+.ci{position:relative;height:200px;border-radius:24px;overflow:hidden;background:var(--ice);animation:pop .5s cubic-bezier(.2,.9,.3,1.2) backwards;animation-delay:calc(var(--k)*.07s)}
+@keyframes pop{from{opacity:0;transform:translateY(18px) scale(.95)}}
+.ci img{width:100%;height:100%;object-fit:cover;transition:transform .8s}
+.ci:hover img{transform:scale(1.08)}
+.ci::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 45%,rgba(11,31,51,.85))}
+.ci b{position:absolute;z-index:2;left:16px;bottom:12px;color:#fff;font:800 19px var(--d);letter-spacing:-.02em}
+.ci em{position:absolute;z-index:2;top:12px;right:12px;padding:4px 10px;border-radius:999px;background:var(--c);color:#fff;font:800 11px "Plus Jakarta Sans",system-ui,sans-serif;font-style:normal;letter-spacing:.03em;transition:background .5s}
+/* fleet */
+.fleet{background:var(--ice)}
+.fleet__g{display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center}
+.tk{position:relative;border-radius:30px;background:#fff;padding:26px;box-shadow:0 30px 70px rgba(11,31,51,.15)}.tk img{width:100%;border-radius:18px}
+.hs{position:absolute;top:8%;padding:8px 14px;border-radius:999px;font:800 13px "Plus Jakarta Sans",system-ui,sans-serif;color:#fff;white-space:nowrap;animation:fl2 3s ease-in-out infinite;box-shadow:0 10px 24px rgba(11,31,51,.25)}
+.hs::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:#fff;margin-right:7px;animation:pl 1.6s infinite}
+.hs1{left:6%;background:var(--blue)}.hs2{left:34%;background:var(--mint);animation-delay:.5s}.hs3{left:62%;background:#e8a800;color:var(--ink);animation-delay:1s}
+@keyframes fl2{50%{transform:translateY(-8px)}}
+.ways{display:grid;gap:14px}
+.way{display:flex;align-items:center;gap:18px;padding:18px 22px;border-radius:22px;background:#fff;border:1px solid var(--line);transition:transform .3s,box-shadow .3s}
+.way:hover{transform:translateX(10px);box-shadow:0 16px 36px rgba(11,31,51,.12)}
+.way span{display:grid;place-items:center;flex:none;width:56px;height:56px;border-radius:16px;background:var(--y);font-size:28px}
+.way h3{font-size:24px}.way p{font-size:14px}
+/* journey */
+.jr{background:#fff}
+.track{position:relative;padding-top:70px}
+.line{position:absolute;left:5%;right:5%;top:96px;height:6px;border-radius:6px;background:var(--ice)}
+.line i{position:absolute;left:0;top:0;height:100%;width:0;border-radius:6px;background:linear-gradient(90deg,var(--y),var(--cy))}
+.jt{position:absolute;top:36px;left:5%;width:96px;margin-left:-48px;transition:left .15s linear}
+.stops{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;position:relative}
+.stop{text-align:center;padding-top:34px;opacity:.45;transition:.4s}.stop.on{opacity:1}
+.stop b{display:grid;place-items:center;width:60px;height:60px;margin:0 auto 14px;border-radius:50%;background:#fff;border:3px solid var(--line);font:800 24px var(--d);color:var(--ink);transition:.4s}
+.stop.on b{background:var(--y);border-color:var(--y);box-shadow:0 0 0 8px rgba(255,199,44,.3)}
+.stop h3{font-size:24px}.stop p{font-size:14px;margin-top:6px}
+/* live */
+.live{background:linear-gradient(160deg,var(--ink),var(--ink2))}
+.live__g{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.big{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:30px}
+.big div{padding:22px;border-radius:22px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14)}
+.big strong{display:block;font:800 56px var(--d);color:var(--y);letter-spacing:-.04em}.big span{font-size:14px;font-weight:700;color:#cfe3f3}
+.dash{padding:26px;border-radius:26px;background:#fff;color:var(--ink);box-shadow:0 30px 70px rgba(0,0,0,.4)}
+.dash__t{display:flex;justify-content:space-between;font-weight:800;margin-bottom:16px}.dash__t b{color:var(--mint);animation:bk 1.4s infinite}@keyframes bk{50%{opacity:.3}}
+.dash__r{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:16px}
+.dash__r div{padding:12px 6px;text-align:center;border-radius:14px;background:var(--frost);border:1px solid var(--line)}
+.dash__r small{display:block;font-size:12px;color:var(--tx)}.dash__r strong{font-size:17px}
+.dash svg{width:100%;height:110px;border-radius:14px;background:var(--ink);padding:6px}
+.dash polyline{fill:none;stroke:var(--y);stroke-width:3;stroke-linejoin:round}
+.ok{margin-top:14px;padding:10px 14px;border-radius:12px;background:#d8f6ea;color:#0a7a56;font-weight:700;font-size:14px}
+/* partners */
+.par{background:var(--frost)}
+.pg{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.pc{position:relative;min-height:290px;padding:34px;border-radius:30px;overflow:hidden;background:#fff;border:1px solid var(--line);display:flex;flex-direction:column;justify-content:flex-end;transition:transform .4s,box-shadow .4s}
+.pc::before{content:"";position:absolute;inset:0;background:var(--ink);opacity:0;transition:opacity .4s}
+.pc:hover{transform:translateY(-10px);box-shadow:0 30px 60px rgba(11,31,51,.25)}.pc:hover::before{opacity:1}
+.pc>*{position:relative;transition:color .3s}.pc span{display:grid;place-items:center;width:68px;height:68px;border-radius:20px;background:var(--y);font-size:34px;margin-bottom:auto}
+.pc h3{font-size:32px}.pc p{margin-top:8px;font-size:15px}.pc:hover h3{color:#fff}.pc:hover p{color:#cfe3f3}
+/* quote */
+.qt{background:var(--y)}
+.qt::before{content:"";position:absolute;right:-120px;top:-120px;width:420px;height:420px;border-radius:50%;background:rgba(255,255,255,.35);pointer-events:none}
+.qt .wrap{position:relative}.qt .hd p{color:#3a3000}.qt .eyebrow{background:var(--ink);color:var(--y)}
+.form{padding:34px;border-radius:30px;background:#fff;box-shadow:0 40px 80px rgba(11,31,51,.25)}
+.svc{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:22px}
+.svc button{padding:16px 8px;border-radius:18px;border:2px solid var(--line);background:var(--frost);color:var(--ink);font:700 14px "Plus Jakarta Sans",system-ui,sans-serif;cursor:pointer;transition:.25s}
+.svc button span{display:block;font-size:28px;pointer-events:none}.svc button:hover{transform:translateY(-4px)}
+.svc button.is-active{border-color:var(--ink);background:var(--y);box-shadow:0 0 0 4px rgba(255,199,44,.35)}
+.fg{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.fg label{display:block;font-size:12px;font-weight:800;color:var(--ink);margin-bottom:6px}
+.fg input,.fg select{width:100%;padding:14px;border-radius:14px;border:1.5px solid var(--line);background:var(--frost);color:var(--ink);font:500 15px "Plus Jakarta Sans",system-ui,sans-serif;outline:none;transition:.2s}
+.fg input:focus,.fg select:focus{border-color:var(--blue);box-shadow:0 0 0 4px rgba(11,127,208,.18);background:#fff}.fg input::placeholder{color:#8aa0b5}
+.form .btn{margin-top:20px;width:100%;padding:18px;font-size:17px}
+#formNote{margin-top:12px;font-size:13px;text-align:center}#formNote.ok2{color:#0a7a56;font-weight:700}
+/* faq */
+.faq{background:#fff}.fq{max-width:860px}
+details{border-bottom:1px solid var(--line)}
+summary{display:flex;justify-content:space-between;gap:16px;padding:24px 0;font:800 clamp(20px,2.6vw,30px) var(--d);color:var(--ink);cursor:pointer;list-style:none;transition:color .2s}
+summary::-webkit-details-marker{display:none}summary::after{content:"+";display:grid;place-items:center;flex:none;width:40px;height:40px;border-radius:50%;background:var(--y);font-size:26px;line-height:1;transition:transform .3s}
+summary:hover{color:var(--blue)}details[open] summary::after{transform:rotate(45deg)}
+details p{padding:0 0 24px;max-width:640px;animation:fi .35s}@keyframes fi{from{opacity:0;transform:translateY(-8px)}}
+footer{padding:60px 0 30px;background:var(--ink);color:#b8cfe3}
+.ft{display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between;align-items:center}.ft .logo{color:#fff}
+.ft nav{display:flex;flex-wrap:wrap;gap:22px;font-weight:700;font-size:14px}.ft nav a:hover{color:var(--y)}
+.copy{margin-top:30px;font-size:13px;color:#7f98b0}
+@media(max-width:1100px){.temp{left:10px}.route{right:10px}}
+@media(max-width:960px){
+.nav__l{position:absolute;top:74px;left:0;right:0;flex-direction:column;gap:0;background:rgba(255,255,255,.98);padding:6px 24px 18px;max-height:0;overflow:hidden;opacity:0;transition:.3s;margin:0;box-shadow:0 14px 30px rgba(11,31,51,.1)}.nav__l.open{max-height:380px;opacity:1}
+.nav__l a{padding:14px 0;border-bottom:1px solid var(--line)}.burger{display:block}.nav__r{display:none}
+.hero{padding:120px 0 80px}.hero .wrap{grid-template-columns:1fr;gap:50px}.hv{margin-right:20px}
+.gal{grid-template-columns:repeat(2,1fr);grid-auto-rows:200px;grid-auto-flow:dense}.t1{grid-row:span 1}.gal .tile:last-child{grid-column:span 2}
+.fleet__g,.live__g,.pg{grid-template-columns:1fr}.fg{grid-template-columns:1fr 1fr}
+.room{grid-template-columns:1fr}
+.stops{grid-template-columns:1fr}.line,.jt{display:none}.track{padding-top:0}.stop{opacity:1;padding-top:10px;display:flex;gap:16px;text-align:left;align-items:center}.stop b{margin:0;flex-shrink:0}
+}
+@media(max-width:600px){.sec{padding:80px 0}.svc{grid-template-columns:1fr 1fr}.fg{grid-template-columns:1fr}.form{padding:22px}.hs{display:none}.temp{left:6px;top:6%}
+.tabs{grid-template-columns:1fr}.ztab{padding:12px 16px}.room__main{padding:24px}.room__list{gap:10px}.ci{height:140px;border-radius:18px}.ci b{font-size:16px;left:12px}
+.gal{gap:12px;grid-auto-rows:150px}.t4,.t8{grid-column:span 2}.tile{border-radius:18px}.tile figcaption{left:14px;right:14px;bottom:12px}.tile h3{font-size:19px;line-height:1.1}.tile small{opacity:1;transform:none;font-size:12px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}.rv{opacity:1;transform:none}#snow{display:none}}
+
+/* Cake image desktop size correction */
+@media (min-width: 961px) {
+    .gal .cake-tile {
+        grid-row: span 1;
+        grid-column: span 1;
+        height: 230px;
+    }
+
+    .gal .cake-tile img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+}
+/* Fix empty spaces in cargo gallery - Desktop */
+@media (min-width: 961px) {
+    .gal {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: 230px;
+        grid-auto-flow: dense;
+        gap: 18px;
+    }
+
+    .gal .tile {
+        min-width: 0;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .gal .tile img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+    }
+
+    /* Keep cake image in one row */
+    .gal .cake-tile {
+        grid-row: span 1;
+        grid-column: span 1;
+    }
+
+    /* Keep wider images */
+    .gal .t4,
+    .gal .t8 {
+        grid-column: span 2;
+    }
+}
+.wa-float{position:fixed;right:20px;bottom:20px;z-index:90;display:flex;align-items:center;gap:10px;padding:14px 18px;border-radius:999px;background:#25d366;color:#fff;font:700 15px "Plus Jakarta Sans",system-ui,sans-serif;box-shadow:0 10px 26px rgba(37,211,102,.5);transition:transform .2s,box-shadow .25s}.wa-float:hover{transform:translateY(-3px);box-shadow:0 14px 32px rgba(37,211,102,.65)}.wa-float svg{width:26px;height:26px;fill:#fff;flex:none}
+@media(max-width:600px){.wa-float{padding:14px;right:14px;bottom:14px}.wa-float span{display:none}}
+.ft__c{display:flex;flex-direction:column;gap:10px;font-size:14px;max-width:420px}.ft__c address{font-style:normal;line-height:1.6}.ft__c a{font-weight:700}.ft__c a:hover{color:var(--y)}
+.btn--wa{background:#25d366;color:#fff;box-shadow:0 12px 28px rgba(37,211,102,.4)}.btn--wa:hover{background:#1ebe5a}
+</style>
+</head>
+<body>
+<div class="progress"></div>
+<header class="nav" id="nav"><div class="wrap nav__in">
+  <a href="#home" class="logo"><i>❄</i>Zoop</a>
+  <nav class="nav__l" id="links"><a href="#cargo">Cargo</a><a href="#temp">Temperature</a><a href="#fleet">Fleet</a><a href="#journey">Journey</a><a href="#live">Live</a><a href="#partners">Partners</a><a href="#faq">FAQ</a></nav>
+  <div class="nav__r"><a href="#partners" class="btn btn--line">Partner login</a><a href="#quote" class="btn btn--cta">Get a quote</a></div>
+  <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</div></header>
+
+<section class="hero" id="home">
+  <canvas id="snow"></canvas>
+  <div class="wrap">
+    <div>
+      <span class="tagline"><b></b>INDIA-WIDE REEFER TRANSPORT NETWORK</span>
+      <h1><span class="ln jump">Your Zoop,</span><span class="ln jump">Our Reefer Trucks</span></h1>
+      <p>Dairy, ice cream, cakes, seafood and meat. Moved cold, tracked live, delivered with proof.</p>
+      <div class="hero__cta"><a href="#quote" class="btn btn--cta">Book a truck →</a><a href="#cargo" class="btn btn--line">See what we carry</a></div>
+      <div class="strip"><span><i>❄</i>Temperature<br>controlled</span><span class="g"><i>✔</i>Verified<br>partners</span><span class="y"><i>⚡</i>Real-time<br>tracking</span></div>
+    </div>
+    <div class="bookwrap" id="quote">
+      <form class="book" id="quoteForm">
+        <h2>Book a reefer truck</h2>
+        <p>Get a quote with every charge listed.</p>
+        <div class="svc">
+          <button type="button" class="tab is-active" data-mode="FTL"><span>🚚</span>Full truck</button>
+          <button type="button" class="tab" data-mode="PTL"><span>📦</span>Part load</button>
+          <button type="button" class="tab" data-mode="Multi-temperature"><span>🌡</span>Multi-temp</button>
+          <button type="button" class="tab" data-mode="Contract"><span>📑</span>Contract</button>
+        </div>
+        <div class="fg">
+          <div class="full"><label for="pickup">Pickup</label><input id="pickup" placeholder="City or address" required/></div>
+          <div class="full"><label for="drop">Drop</label><input id="drop" placeholder="City or address" required/></div>
+          <div><label for="cargo-type">Cargo</label><select id="cargo-type"><option>Dairy &amp; ice cream</option><option>Cakes &amp; bakery</option><option>Seafood &amp; meat</option><option>Frozen food</option><option>Pharma (on approval)</option></select></div>
+          <div><label for="temp-sel">Temperature</label><select id="temp-sel"><option>Frozen (-18°C or below)</option><option>Chilled</option><option>Controlled ambient</option><option>Multi-temperature</option></select></div>
+          <div><label for="hire">Hiring</label><select id="hire"><option>On-call (single trip)</option><option>Dedicated vehicle</option><option>Monthly contract</option><option>Annual contract</option></select></div>
+          <div><label for="phone">Mobile number</label><input id="phone" type="tel" placeholder="10-digit number" pattern="[0-9]{10}" required/></div>
+        </div>
+        <button type="submit" class="btn btn--ink">Get my quote</button>
+        <button type="button" id="waSend" class="btn btn--wa">Send this request on WhatsApp</button>
+        <p id="formNote" role="status">We call you back with the quote.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="sec work" id="cargo"><div class="wrap">
+  <div class="hd rv"><span class="eyebrow">Cargo</span><h2>What rides with us</h2><p>Hover a tile to see its temperature.</p></div>
+  <div class="gal">
+        <figure class="tile rv"><img src="images/pharma.webp" alt="Pharma" loading="lazy"/><figcaption><h3>Pharma</h3><small>After licence and quality checks</small></figcaption></figure>
+
+    <figure class="tile rv"><img src="images/icecream.webp" alt="Ice cream" loading="lazy"/><figcaption><h3>Ice cream</h3><small>Frozen, -18°C</small></figcaption></figure>
+    <figure class="tile rv"><img src="images/milk.webp" alt="Milk and dairy" loading="lazy"/><figcaption><h3>Milk &amp; dairy</h3><small>Chilled, 2-8°C</small></figcaption></figure>
+    <figure class="tile rv"><img src="images/meat.webp" alt="Meat" loading="lazy"/><figcaption><h3>Meat</h3><small>Frozen, non-veg zone</small></figcaption></figure>
+    <figure class="tile t4 rv"><img src="images/seafood.webp" alt="Seafood" loading="lazy"/><figcaption><h3>Seafood</h3><small>Frozen, kept apart from dairy</small></figcaption></figure>
+    <figure class="tile rv"><img src="images/frozenfood.webp" alt="Frozen food" loading="lazy"/><figcaption><h3>Frozen food</h3><small>Frozen, -18°C</small></figcaption></figure>
+    <figure class="tile t8 rv"><img src="images/foodmanufacture.webp" alt="Food manufacturing" loading="lazy"/><figcaption><h3>Factories &amp; restaurants</h3><small>Repeat bookings, steady lanes</small></figcaption></figure>
+<figure class="tile cake-tile rv">
+    <img src="images/cake1.webp" alt="Cakes and bakery" loading="lazy"/>
+    <figcaption>
+        <h3>Cakes &amp; bakery</h3>
+        <small>Chilled, 2-8°C</small>
+    </figcaption>
+</figure>
+    <figure class="tile rv"><img src="images/warehouse.webp" alt="Warehouse" loading="lazy"/><figcaption><h3>Warehouses</h3><small>Overflow reefer capacity</small></figcaption></figure>
+  </div>
+  <div class="chips rv"><span>Pharma kept separate</span><span>Veg and non-veg apart</span><span>Meat away from dairy</span><span>Smell protection</span><span>Allergen flags</span></div>
+</div></section>
+
+<!-- TEMPERATURE (new tabs design) -->
+<section class="sec tz z-fz" id="temp"><div class="wrap">
+  <div class="hd rv"><span class="eyebrow">Temperature</span><h2>Pick your cold zone</h2><p>Tap a zone to see the setting and what travels in it.</p></div>
+  <div class="tabs rv" role="tablist" aria-label="Temperature zones">
+    <button type="button" class="ztab on" role="tab" aria-selected="true" data-i="0"><i>❄</i><span><strong>Frozen</strong><small>-25°C to -10°C</small></span></button>
+    <button type="button" class="ztab" role="tab" aria-selected="false" data-i="1"><i>🥛</i><span><strong>Chilled</strong><small>2°C to 8°C</small></span></button>
+    <button type="button" class="ztab" role="tab" aria-selected="false" data-i="2"><i>☀</i><span><strong>Ambient</strong><small>15°C to 25°C</small></span></button>
+  </div>
+  <div class="room rv" aria-live="polite">
+    <div class="room__main">
+      <div>
+        <small id="zk">Zone 1 of 3</small>
+        <div class="room__n" id="dn">-18<span>°C</span></div>
+        <h3 id="dz">Frozen zone</h3>
+        <p id="zd">Deep-frozen loads that must never thaw in transit.</p>
+      </div>
+      <div class="specs" id="zs"><span>Set point -18°C</span><span>Live alerts</span><span>Seafood kept apart</span></div>
+    </div>
+    <div class="room__list" id="zl">
+      <div class="ci" style="--k:0"><img src="images/icecream.webp" alt="Ice cream"/><em>-18°C</em><b>Ice cream</b></div>
+      <div class="ci" style="--k:1"><img src="images/seafood.webp" alt="Seafood"/><em>-18°C</em><b>Seafood</b></div>
+      <div class="ci" style="--k:2"><img src="images/meat.webp" alt="Meat"/><em>Non-veg zone</em><b>Meat</b></div>
+      <div class="ci" style="--k:3"><img src="images/frozenfood.webp" alt="Frozen food"/><em>-18°C</em><b>Frozen food</b></div>
+    </div>
+  </div>
+</div></section>
+
+<section class="sec fleet" id="fleet"><div class="wrap fleet__g">
+  <div class="tk rv"><img src="images/truck.webp" alt="Multi-temperature reefer truck" loading="lazy"/><span class="hs hs1">Frozen -18°C</span><span class="hs hs2">Chilled 2-8°C</span><span class="hs hs3">Ambient</span></div>
+  <div>
+    <div class="hd rv" style="margin-bottom:30px"><span class="eyebrow">Fleet</span><h2>One truck, three climates</h2></div>
+    <div class="ways">
+      <div class="way rv"><span>🚚</span><div><h3>Full truck</h3><p>One reefer, only your cargo.</p></div></div>
+      <div class="way rv"><span>📦</span><div><h3>Part load</h3><p>Share a truck, pay for your space.</p></div></div>
+      <div class="way rv"><span>🌡</span><div><h3>Multi-temperature</h3><p>Frozen and chilled in one run.</p></div></div>
+      <div class="way rv"><span>📑</span><div><h3>Contracts</h3><p>Monthly or annual, fixed rate card.</p></div></div>
+    </div>
+  </div>
+</div></section>
+
+<section class="sec jr" id="journey"><div class="wrap">
+  <div class="hd rv"><span class="eyebrow">Journey</span><h2>Booked to delivered</h2><p>Scroll and watch the truck go.</p></div>
+  <div class="track" id="track">
+    <div class="line"><i id="lf"></i></div>
+    <svg class="jt" id="jt" viewBox="0 0 260 110" aria-hidden="true"><rect x="4" y="8" width="168" height="72" rx="8" fill="#e1f0f8" stroke="#0b1f33" stroke-width="3"/><rect x="4" y="8" width="168" height="14" rx="6" fill="#0b7fd0"/><path d="M178 28h46l26 28v24h-72z" fill="#ffc72c" stroke="#0b1f33" stroke-width="3"/><path d="M190 36h30l16 18h-46z" fill="#fff"/><circle cx="52" cy="92" r="14" fill="#0b1f33" stroke="#8aa0b5" stroke-width="5"/><circle cx="100" cy="92" r="14" fill="#0b1f33" stroke="#8aa0b5" stroke-width="5"/><circle cx="212" cy="92" r="14" fill="#0b1f33" stroke="#8aa0b5" stroke-width="5"/></svg>
+    <ol class="stops" id="stops">
+      <li class="stop"><b>1</b><div><h3>Enter</h3><p>Pickup, drop, cargo.</p></div></li>
+      <li class="stop"><b>2</b><div><h3>Quote</h3><p>Every charge listed.</p></div></li>
+      <li class="stop"><b>3</b><div><h3>Match</h3><p>Verified reefer assigned.</p></div></li>
+      <li class="stop"><b>4</b><div><h3>Track</h3><p>GPS and temperature live.</p></div></li>
+      <li class="stop"><b>5</b><div><h3>Deliver</h3><p>OTP and handover temperature.</p></div></li>
+    </ol>
+  </div>
+</div></section>
+
+<section class="sec live dk" id="live"><div class="wrap live__g">
+  <div>
+    <div class="hd rv" style="margin-bottom:0"><span class="eyebrow">Live</span><h2>Zoop, every kilometre</h2><p>Alerts for temperature, door, cooling unit and route.</p></div>
+    <div class="big rv"><div><strong data-n="3">0</strong><span>temperature zones</span></div><div><strong data-n="5">0</strong><span>steps to delivery</span></div><div><strong data-n="4">0</strong><span>hiring models</span></div><div><strong data-n="6">0</strong><span>cargo types</span></div></div>
+  </div>
+  <div class="dash rv" id="dash">
+    <div class="dash__t"><span>Trip #ZP-2041</span><b>● LIVE</b></div>
+    <div class="dash__r"><div><small>Temperature</small><strong id="dt">-18.2°C</strong></div><div><small>Door</small><strong>Closed</strong></div><div><small>Cooling</small><strong>On</strong></div></div>
+    <svg viewBox="0 0 300 90" preserveAspectRatio="none"><polyline id="pl" points="0,50 25,46 50,52 75,45 100,48 125,44 150,50 175,47 200,43 225,49 250,45 300,47"/><line x1="0" y1="20" x2="300" y2="20" stroke="#ff6b4a" stroke-dasharray="4"/><text x="4" y="14" fill="#ff6b4a" font-size="9">Limit</text></svg>
+    <div class="ok">✔ No breaches this trip</div>
+  </div>
+</div></section>
+
+<section class="sec par" id="partners"><div class="wrap">
+  <div class="hd rv"><span class="eyebrow">Partners</span><h2>Own a reefer? Join the fleet</h2></div>
+  <div class="pg">
+    <div class="pc rv"><span>🧑‍✈️</span><h3>Owner-cum-driver</h3><p>One reefer, direct onboarding.</p></div>
+    <div class="pc rv"><span>🚛</span><h3>Fleet owner</h3><p>10 to 50+ reefers, one dashboard.</p></div>
+    <div class="pc rv"><span>🤝</span><h3>Aggregator</h3><p>Pool vehicles, consolidated payouts.</p></div>
+  </div>
+  <div class="chips rv"><span>Vehicle RC and permit</span><span>Driver licence</span><span>Hygiene certificate</span><span>Reefer calibration</span><span>Premium vendor badge</span></div>
+  <div class="rv" style="margin-top:40px"><a href="#quote" class="btn btn--cta">Register as partner →</a></div>
+</div></section>
+
+<section class="sec faq" id="faq"><div class="wrap fq">
+  <div class="hd rv"><span class="eyebrow">FAQ</span><h2>Quick answers</h2></div>
+  <details class="rv"><summary>FTL or PTL?</summary><p>FTL is a whole dedicated reefer. PTL shares a truck with compatible cargo and you pay for your weight, volume or pallets.</p></details>
+  <details class="rv"><summary>Can two temperatures share a truck?</summary><p>Yes, on multi-temperature vehicles with insulated bulkheads. Each compartment holds its own band.</p></details>
+  <details class="rv"><summary>Do you carry pharma?</summary><p>Only after licensing, packaging and quality validation, and always in a dedicated compartment or vehicle.</p></details>
+  <details class="rv"><summary>How do I know it stayed cold?</summary><p>A live temperature graph during the trip and a recorded handover temperature at delivery.</p></details>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="ft"><a href="#home" class="logo"><i>❄</i>Zoop</a>
+  <nav><a href="#cargo">Cargo</a><a href="#fleet">Fleet</a><a href="#partners">Partners</a><a href="mailto:hello@example.com">hello@example.com</a></nav>
+  <div class="ft__c"><address>No76, 1st J Cross, Sharada Colony, Basaweshwaranagar, Basaveshwara Nagar, Bangalore, Karnataka, India - 560079</address><a href="https://wa.me/918023320432" target="_blank" rel="noopener">WhatsApp: +91 80233 20432</a><a href="tel:+918023320432">Call: +91 80233 20432</a></div></div>
+  <p class="copy">© <span id="yr"></span> Zoop. Reefer trucking across India.</p>
+</div></footer>
+
+<a class="wa-float" href="https://wa.me/918023320432?text=Hi%20Zoop%2C%20I%27d%20like%20a%20reefer%20truck%20quote." target="_blank" rel="noopener" aria-label="Chat with Zoop on WhatsApp"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3C8.8 3 3 8.8 3 16c0 2.3.6 4.5 1.7 6.4L3 29l6.8-1.8A13 13 0 0 0 16 29c7.2 0 13-5.8 13-13S23.2 3 16 3zm0 23.6c-2 0-3.9-.5-5.6-1.5l-.4-.2-4 1 1.1-3.9-.3-.4A10.6 10.6 0 1 1 16 26.6zm5.8-7.9c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.2-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.3.3-.5.1-.2.1-.4 0-.6l-1-2.3c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.9s1.2 3.3 1.4 3.5c.2.2 2.4 3.7 5.9 5.1 3.5 1.4 3.5.9 4.1.9.6-.1 1.9-.8 2.2-1.5.3-.8.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4z"/></svg><span>WhatsApp us</span></a>
+<script>
+const $=s=>document.querySelector(s),$$=s=>document.querySelectorAll(s),reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
+/* every block runs on its own, so one error can never break the others */
+function safe(name,fn){try{fn()}catch(e){console.error("[Zoop] "+name+" failed:",e)}}
+
+safe("headline",()=>{
+  let n=0;
+  $$(".jump").forEach(el=>{const text=el.textContent;el.setAttribute("aria-label",text);el.textContent="";
+    text.split(" ").forEach(word=>{const w=document.createElement("span");w.className="w";w.setAttribute("aria-hidden","true");
+      [...word].forEach(c=>{const s=document.createElement("span");s.className="ch";s.textContent=c;s.style.setProperty("--i",n++);w.appendChild(s)});el.appendChild(w)})});
+});
+
+safe("menu",()=>{
+  const burger=$("#burger"),links=$("#links");
+  burger.onclick=()=>burger.setAttribute("aria-expanded",links.classList.toggle("open"));
+  $$("#links a").forEach(a=>a.onclick=()=>{links.classList.remove("open");burger.setAttribute("aria-expanded",false)});
+});
+
+safe("scroll",()=>{
+  const bar=$(".progress"),jt=$("#jt"),lf=$("#lf"),track=$("#track"),stops=[...$$(".stop")];
+  function onScroll(){
+    const h=document.documentElement.scrollHeight-innerHeight;
+    bar.style.transform=`scaleX(${h>0?scrollY/h:0})`;$("#nav").classList.toggle("on",scrollY>40);
+    const r=track.getBoundingClientRect(),p=Math.min(1,Math.max(0,(innerHeight*.85-r.top)/(innerHeight*.6+r.height*.2)));
+    jt.style.left=(5+p*90)+"%";lf.style.width=(p*100)+"%";
+    stops.forEach((s,i)=>s.classList.toggle("on",p>=i/4-.02&&p>0));
+  }
+  addEventListener("scroll",onScroll,{passive:true});onScroll();
+});
+
+safe("reveal",()=>{
+  $$(".gal,.ways,.pg,.chips,.big").forEach(g=>g.querySelectorAll(":scope > .rv, :scope > div").forEach((e,i)=>e.style.setProperty("--dl",i*.08+"s")));
+  const pl=$("#pl");pl.setAttribute("pathLength","1");pl.style.strokeDasharray="1";
+  const io=new IntersectionObserver(es=>es.forEach(e=>{
+    if(!e.isIntersecting)return;const t=e.target;t.classList.add("in");io.unobserve(t);
+    t.querySelectorAll("[data-n]").forEach(c=>{const to=+c.dataset.n;let v=0;const k=setInterval(()=>{c.textContent=++v;if(v>=to)clearInterval(k)},300)});
+    if(t.id==="dash"&&!reduce)pl.animate([{strokeDashoffset:1},{strokeDashoffset:0}],{duration:2200,easing:"ease-out"});
+  }),{threshold:.15});
+  $$(".rv").forEach(e=>io.observe(e));
+});
+
+/* ===== TEMPERATURE TABS ===== */
+safe("temperature tabs",()=>{
+  const sec=$("#temp");
+  const ZONES=[
+    {id:"fz",k:"Zone 1 of 3",t:-18,name:"Frozen zone",d:"Deep-frozen loads that must never thaw in transit.",
+      specs:["Set point -18°C","Live alerts","Seafood kept apart"],
+      items:[["Ice cream","icecream","-18°C"],["Seafood","seafood","-18°C"],["Meat","meat","Non-veg zone"],["Frozen food","frozenfood","-18°C"]]},
+    {id:"ch",k:"Zone 2 of 3",t:5,name:"Chilled zone",d:"Fresh dairy and bakery that stay cold but never freeze.",
+      specs:["Set point 2-8°C","Dairy away from meat","Door alerts"],
+      items:[["Milk & dairy","milk","2-8°C"],["Cakes & bakery","cake1","2-8°C"],["Pharma","pharma","On approval"],["Restaurants","foodmanufacture","Repeat lanes"]]},
+    {id:"am",k:"Zone 3 of 3",t:20,name:"Ambient zone",d:"Controlled room temperature for dry goods and supplies.",
+      specs:["Set point 15-25°C","Clean, dry cabin","Overflow capacity"],
+      items:[["Warehouse stock","warehouse","15-25°C"],["Bakery supplies","foodmanufacture","15-25°C"]]}
+  ];
+  const tabs=[...sec.querySelectorAll(".ztab")];
+  let cur=0,timer=null,manual=false;
+  function show(i){
+    cur=i;const z=ZONES[i];
+    sec.className="sec tz z-"+z.id;
+    tabs.forEach((b,j)=>{b.classList.toggle("on",j===i);b.setAttribute("aria-selected",j===i?"true":"false")});
+    $("#zk").textContent=z.k;
+    $("#dn").innerHTML=z.t+"<span>°C</span>";
+    $("#dz").textContent=z.name;$("#zd").textContent=z.d;
+    $("#zs").innerHTML=z.specs.map(s=>"<span>"+s+"</span>").join("");
+    $("#zl").innerHTML=z.items.map((it,k)=>'<div class="ci" style="--k:'+k+'"><img src="images/'+it[1]+'.webp" alt="'+it[0]+'"/><em>'+it[2]+'</em><b>'+it[0]+'</b></div>').join("");
+  }
+  function stop(){clearInterval(timer);timer=null}
+  function start(){stop();if(reduce||manual)return;timer=setInterval(()=>show((cur+1)%3),5000)}
+  tabs.forEach((b,i)=>b.addEventListener("click",()=>{manual=true;stop();tabs.forEach(x=>x.classList.add("paused"));show(i)}));
+  new IntersectionObserver(([e])=>{e.isIntersecting?start():stop()},{threshold:.3}).observe(sec);
+});
+
+safe("live numbers",()=>{
+  setInterval(()=>{const t=(-18+(Math.random()-.5)*.9).toFixed(1)+"°C";const g=$("#gt"),d=$("#dt");if(g)g.textContent=t;if(d)d.textContent=t},1800);
+});
+
+/* ===== QUOTE FORM ===== */
+safe("quote form",()=>{
+  const tabs=[...$$(".svc .tab")];
+  tabs.forEach(t=>t.addEventListener("click",()=>{tabs.forEach(x=>x.classList.remove("is-active"));t.classList.add("is-active")}));
+  const form=$("#quoteForm");
+  form.addEventListener("submit",e=>{
+    e.preventDefault();
+    const note=$("#formNote"),mode=($(".svc .tab.is-active")||{dataset:{mode:"FTL"}}).dataset.mode;
+    note.textContent="Thanks! We'll call you shortly with a "+mode+" quote for "+$("#pickup").value+" → "+$("#drop").value+".";
+    note.classList.add("ok2");
+    form.reset();
+  });
+});
+
+
+safe("whatsapp quote",()=>{
+  const form=$("#quoteForm");
+  $("#waSend").addEventListener("click",()=>{
+    if(!form.reportValidity())return;
+    const mode=($(".svc .tab.is-active")||{dataset:{mode:"FTL"}}).dataset.mode,v=id=>$("#"+id).value;
+    const msg=["Hi Zoop, I'd like a reefer quote.","Type: "+mode,"Pickup: "+v("pickup"),"Drop: "+v("drop"),"Cargo: "+v("cargo-type"),"Temperature: "+v("temp-sel"),"Hiring: "+v("hire"),"My mobile: "+v("phone")].join("\n");
+    window.open("https://wa.me/918023320432?text="+encodeURIComponent(msg),"_blank","noopener");
+  });
+});
+
+safe("footer year",()=>{$("#yr").textContent=new Date().getFullYear()});
+
+safe("snow",()=>{
+  const cv=$("#snow");
+  if(reduce)return;
+  const x=cv.getContext("2d");let w,h,f=[],raf;
+  const mk=()=>({x:Math.random()*w,y:Math.random()*h,r:Math.random()*2.6+.8,v:Math.random()*.7+.25,p:Math.random()*6.28});
+  const size=()=>{const d=Math.min(devicePixelRatio||1,2);w=cv.clientWidth;h=cv.clientHeight;cv.width=w*d;cv.height=h*d;x.setTransform(d,0,0,d,0,0);f=Array.from({length:w<640?30:70},mk)};
+  const tick=()=>{x.clearRect(0,0,w,h);for(const s of f){s.y+=s.v;s.p+=.012;s.x+=Math.sin(s.p)*.4;if(s.y>h+5){s.y=-5;s.x=Math.random()*w}x.beginPath();x.arc(s.x,s.y,s.r,0,6.283);x.fillStyle=`rgba(255,255,255,${.25+s.r/8})`;x.fill()}raf=requestAnimationFrame(tick)};
+  size();tick();addEventListener("resize",size);
+  new IntersectionObserver(([e])=>{cancelAnimationFrame(raf);if(e.isIntersecting)tick()}).observe($("#home"));
+});
+</script>
+</body>
+</html>
